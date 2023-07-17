@@ -80,14 +80,14 @@ body {
 
 .modal input {
     font-family: 'Space Mono';
+    border-radius: 5px;
 }
 
 .wpcf7-submit {
     border: none;
-    border-left: 4px black solid;
     width: 80% !important;
     margin-left: 10%;
-    background: linear-gradient(to right, black 50%, white 50%);
+    background: #D8D8D8;
     background-size: 200% 100%;
     background-position: right;
     transition: all 500ms linear;
@@ -108,6 +108,7 @@ body {
 .wpcf7-form-control,
 .wpcf7-form-control-wrap {
     width: 100%;
+    border-radius: 5px !important;
 }
 
 .modal-content span {
@@ -216,6 +217,7 @@ textarea {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px black solid;
+    margin-bottom: 150px !important;
 }
 
 #options_single .btn_modale {
@@ -246,6 +248,7 @@ textarea {
 .options_controls {
     display: flex;
     justify-content: space-around;
+    padding-top: 150px!important;
 }
 
 .options_controls a {
@@ -257,12 +260,32 @@ textarea {
 
 .thumb {
     display: none;
+    position: absolute;
 }
+
+.thumbleft {
+    top: 820px;
+    right: 105px;
+}
+.thumbright {
+    top: 820px;
+    right: 105px;
+}
+
+
+.fleche {
+    display: flex !important;
+}
+
+
+
+
 
 .intro_modale {
     display: flex;
     align-items: center;
     height: 118px;
+    padding-top: 30px;
 }
 
 .intro_modale p {
@@ -277,6 +300,16 @@ textarea {
 #posts_navigation h3 {
     margin-bottom: 4vh;
 }
+
+
+
+
+
+
+
+
+
+
 
 .fleche:hover .thumb {
     display: block;
@@ -433,10 +466,11 @@ textarea {
 
 .filtres select {
     width: 19vw;
-    height: 3vh;
+    height: 7vh;
     background-color: white;
-    border-radius: 0px;
-    border: 1px solid black;
+    border-radius: 10px;
+    border: 1px solid #B8BBC2;
+    ;
 }
 
 /*Galerie photos*/

@@ -19,7 +19,7 @@
         }
         ?>
     </div>
-
+<!-- Menu Burger -->
     <button class="menu-toggle" aria-expanded="false">
         <i class="fa-solid fa-bars"></i>
         <?php wp_nav_menu([
@@ -27,7 +27,7 @@
         'menu-class' => 'menu_header'
     ]) ?>
     </button>
-    
+    <!-- Menu classique -->
     <?php wp_nav_menu([
         'theme_location' => 'header',
         'menu-class' => 'menu_header'

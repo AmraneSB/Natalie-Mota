@@ -21,7 +21,7 @@ function mytheme_styles()
     wp_enqueue_script('parent-script', get_template_directory_uri() . '/js/script.js', array(), false, true);
 }
 
-
+// Bouton contact
 function add_contact($items, $args)
 {
     if ($args->theme_location == 'header') {
@@ -29,7 +29,7 @@ function add_contact($items, $args)
     }
     return $items;
 }
-
+// Mention texte "Tous droits réservés"
 add_filter('wp_nav_menu_items', 'add_mention', 10, 2);
 function add_mention($items, $args)
 {

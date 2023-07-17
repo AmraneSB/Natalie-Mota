@@ -85,38 +85,40 @@ function slideLeft() {
 
 
 // Charger plus de photos
+// Réglage de base
 let offset = 0;
 let category = '';
 let format = '';
 let tri = '';
+// Bouton charger plus
 const buttonLoad = document.querySelector('#load_more');
 if (buttonLoad != null) {
 
 buttonLoad.addEventListener('click', loadArticles);
 
 }
-
+// Filtre Catégorie
 const inputCategory = document.querySelector('#category');
 if (inputCategory != null) {
 
 inputCategory.addEventListener('change', loadArticles);
 
 }
-
+// Filtre Format
 const inputFormat = document.querySelector('#format');
 if (inputFormat != null) {
 
 inputFormat.addEventListener('change', loadArticles);
 
 }
-
+// Filtre Ancienneté
 const inputTri = document.querySelector('#tri');
 if (inputTri != null) {
 
 inputTri.addEventListener('change', loadArticles);
 
 }
-
+// Fonction lorsque qu'un filtre est appliqué
 function loadArticles() {
 
     if (inputCategory.value != category || inputFormat.value != format || inputTri.value != tri) {
@@ -131,6 +133,7 @@ function loadArticles() {
         offset += 12;
     }
 
+    // Fetch qui permet de charger dynamiquement les photos
     fetch('/wp-content/themes/theme/fetch_articles.php?offset=' + offset + '&category=' + category + '&format=' + format + '&tri=' + tri)
         .then((response) => response.json())
         .then((data) => {

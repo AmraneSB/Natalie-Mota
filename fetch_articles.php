@@ -1,6 +1,8 @@
 <?php
-// http://projet11.local/wp-content/themes/theme/fetch_articles.php?offset=12
+// http://projet11bis/wp-content/themes/theme/fetch_articles.php?offset=12
 
+
+// réglage de base du fetch pur charger dynamiquement les différentes images
 require_once( dirname( __FILE__ ) . '\..\..\..\wp-load.php' );
 header('Content-Type: application/json');
 
@@ -21,7 +23,7 @@ if (isset($_GET['tri'])) {
     $tri = $_GET['tri'];
 }
 
-
+// Paramètre avec les différents tableau possible 
     $args = array(
         'post_type' => 'photo',
         'posts_per_page' => 12,
@@ -57,6 +59,6 @@ if ($loadMore->have_posts()) {
     }
 
 }
-echo json_encode($photos);
+echo json_encode($photos);//représentation textuel des objets sous le meme format
 die();
 ?>

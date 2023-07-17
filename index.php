@@ -5,6 +5,7 @@ Template Name: Accueil
 get_header(); ?>
 
 <header>
+    <!-- Code permettant d'aller chercher la bannière -->
     <?php
     $args = array(
         'post_type' => 'photo',
@@ -36,11 +37,11 @@ get_header(); ?>
         <div id="filtres_filter">
             <div id="filtre_categorie">
 
-
-                <label for="category">Categories</label>
+                <!-- Filtre par Catégorie -->
+             
 
                 <select name="category" id="category">
-                    <option value="" selected></option>
+                    <option value="" selected>CATÉGORIES</option>
 
                     <?php $categories = get_object_taxonomies('photo');
                     $terms = get_terms($categories[0]);
@@ -53,10 +54,11 @@ get_header(); ?>
                 </select>
             </div>
             <div id="filtre_format">
-                <label for="format">Formats</label>
+                <!-- Filtre par Format -->
+                
                 <select name="format" id="format">
-                    <option value="" selected></option>
-
+                    <option value="" selected>FORMATS</option>
+                 
                     <?php $categories = get_object_taxonomies('photo');
                     $terms = get_terms($categories[1]);
 
@@ -71,16 +73,18 @@ get_header(); ?>
             </div>
         </div>
         <div id="filtre_sort">
-            <label for="tri">Trier par</label>
+            <!-- Filtre par Ancienneté -->
+            
             <select name="tri" id="tri">
 
-                <option value="" selected></option>
-                <option value="DESC">Nouveautés</option>
+                <option value="" selected>TRIER PAR</option>
+                <option value="DESC">Les plus récentes</option>
                 <option value="ASC">Les plus anciens</option>
 
             </select>
         </div>
     </div>
+    <!-- Galerie comportant les différente images -->
     <section class="galerie" id="#galerie">
 
         <?php $args = array(
@@ -105,6 +109,7 @@ get_header(); ?>
         wp_reset_query();
         ?>
     </section>
+    <!-- Bouton pour charger dynamiquement les différentes images -->
     <button id="load_more"><span>Charger plus</span></button>
 </main>
 <?php get_footer() ?>
